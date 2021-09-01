@@ -1,6 +1,8 @@
 <template>
-    <div class="pokemon p-6" :class="type" >
-        <h1 class="text-center">{{ species }}</h1>
+    <div class="pokemon p-6 rounded-lg shadow-lg" :class="type">
+        <h1 class="uppercase font-bold tracking-wider">{{ species }}</h1>
+        <p class="uppercase font-semibold tracking-wider">{{ type }} / {{ type2 }}</p>
+        <img class="w-full" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" />
     </div>
 </template>
 
@@ -12,7 +14,9 @@ export default {
     },
 
     setup() {
-        
+        return {
+            type2: 'poison'
+        }
     },
 }
 </script>
@@ -41,7 +45,6 @@ export default {
     --dark: #705746;
     --steel: #B7B7CE;
     --fairy: #D685AD;
-
 }
 
 .normal {
