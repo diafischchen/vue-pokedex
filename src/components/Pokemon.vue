@@ -1,9 +1,11 @@
 <template>
-    <div class="pokemon p-6 rounded-lg shadow-lg" :class="type[0]">
-        <h1 class="uppercase font-bold tracking-wider">{{ species }}</h1>
-        <p class="uppercase font-semibold tracking-wider">{{ type[0] }} <span v-if="type[1]">/ {{ type[1] }}</span></p>
-        <img class="w-full" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" />
-    </div>
+    <transition name="fade-in" appear>
+        <div class="pokemon p-6 rounded-lg shadow-lg" :class="type[0]">
+            <h1 class="uppercase font-bold tracking-wider">{{ species }}</h1>
+            <p class="uppercase font-semibold tracking-wider">{{ type[0] }} <span v-if="type[1]">/ {{ type[1] }}</span></p>
+            <img class="w-full" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" />
+        </div>
+    </transition>
 </template>
 
 <script>
@@ -133,6 +135,15 @@ export default {
 .fairy {
     background-color: var(--fairy);
     color: var(--font-dark);
+}
+
+.fade-in-enter-active {
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+}
+
+.fade-in-enter-from {
+    opacity: 0;
+    transform: scale(0);
 }
 
 </style>
