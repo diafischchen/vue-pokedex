@@ -56,7 +56,7 @@ export default {
 
 .water {
     background-color: var(--water);
-    color: var(--font-dark);
+    color: var(--font-light);
 }
 
 .electric {

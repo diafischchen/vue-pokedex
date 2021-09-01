@@ -5,6 +5,7 @@
         <div class="pokedex grid grid-cols-3 mt-6">
             <Pokemon species="Bisasam" type="grass" />
             <Pokemon species="Glumanda" type="fire" />
+            <Pokemon species="Schiggy" type="water" />
         </div>
     </div>
 </template>
