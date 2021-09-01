@@ -1,8 +1,8 @@
 <template>
-    <div class="pokemon p-6 rounded-lg shadow-lg" :class="type">
+    <div class="pokemon p-6 rounded-lg shadow-lg" :class="type[0]">
         <h1 class="uppercase font-bold tracking-wider">{{ species }}</h1>
-        <p class="uppercase font-semibold tracking-wider">{{ type }} / {{ type2 }}</p>
-        <img class="w-full" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" />
+        <p class="uppercase font-semibold tracking-wider">{{ type[0] }} <span v-if="type[1]">/ {{ type[1] }}</span></p>
+        <img class="w-full" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" />
     </div>
 </template>
 
@@ -10,13 +10,11 @@
 export default {
     props: {
         species: String,
-        type: String
+        type: Array
     },
 
     setup() {
-        return {
-            type2: 'poison'
-        }
+
     },
 }
 </script>
@@ -59,7 +57,7 @@ export default {
 
 .water {
     background-color: var(--water);
-    color: var(--font-light);
+    color: var(--font-dark);
 }
 
 .electric {
