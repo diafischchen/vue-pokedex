@@ -2,7 +2,7 @@
     <div class="pokemon p-6 rounded-lg shadow-lg" data-aos="zoom-in" :class="type[0]">
         <h1 class="uppercase font-bold tracking-wider">{{ species }}</h1>
         <p class="uppercase font-semibold tracking-wider">{{ type[0] }} <span v-if="type[1]">/ {{ type[1] }}</span></p>
-        <img class="w-full" :src="sprite" />
+        <img class="h-64 w-64 mx-auto" :src="sprite" loading="lazy" />
     </div>
 </template>
 
