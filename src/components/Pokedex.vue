@@ -26,7 +26,7 @@ export default {
 
     computed: {
         pokemonArr() {
-            return this.$store.state.pokemon
+            return this.$store.getters.filteredPokemon
         }
     },
 
