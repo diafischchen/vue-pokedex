@@ -3,7 +3,7 @@
         <h1 class="text-center text-2xl text-blue-500 font-bold">Vue Pokedex</h1>
         <p class="mt-4 text-gray-800 text-center">Kleines aber feines Vue Projekt</p>
         <div class="pokedex grid grid-cols-3 m-6 gap-6">
-            <Pokemon v-for="pokemon in pokemonArr" :key="pokemon.species" :species="pokemon.species" :type="pokemon.type" :sprite="pokemon.sprite" />
+            <Pokemon v-for="pokemon in pokemonArr" :key="pokemon.id" :species="pokemon.species" :type="pokemon.type" :sprite="pokemon.sprite" />
         </div>
     </div>
 </template>
@@ -35,6 +35,7 @@ export default {
                     }
 
                     this.$store.commit('addPokemon', {
+                        id: response.data.id,
                         species: response.data.name,
                         type: types,
                         sprite: response.data.sprites.other['official-artwork'].front_default
