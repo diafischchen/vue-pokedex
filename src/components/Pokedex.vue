@@ -1,8 +1,9 @@
 <template>
-    <div class="content bg-gray-100 py-6">
-        <h1 class="text-center text-2xl text-blue-500 font-bold">Vue Pokedex</h1>
-        <p class="mt-4 text-gray-800 text-center">Kleines aber feines Vue Projekt</p>
-        <div class="pokedex grid grid-cols-3 m-6 gap-6">
+    <div class="content">
+        <div class="z-20 bg-blue-600 shadow-lg">
+            <Menu />
+        </div>
+        <div class="pokedex grid grid-cols-3 m-6 gap-6 z-10">
             <Pokemon v-for="pokemon in pokemonArr" :key="pokemon.id" :species="pokemon.species" :type="pokemon.type" :sprite="pokemon.sprite" />
         </div>
     </div>
@@ -11,10 +12,12 @@
 <script>
 import axios from 'axios'
 import Pokemon from './Pokemon.vue'
+import Menu from './Menu.vue'
 
 export default {
     components: {
-        Pokemon
+        Pokemon,
+        Menu
     },
 
     setup() {
@@ -104,7 +107,7 @@ export default {
     },
 
     async created() {
-        await this.getPokemonAmount(898);
+        await this.getPokemonAmount(151);
     }
 }
 </script>
