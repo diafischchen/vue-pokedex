@@ -3,7 +3,7 @@
         <div class="pokemon p-6 rounded-lg shadow-lg" :class="type[0]">
             <h1 class="uppercase font-bold tracking-wider">{{ species }}</h1>
             <p class="uppercase font-semibold tracking-wider">{{ type[0] }} <span v-if="type[1]">/ {{ type[1] }}</span></p>
-            <img class="w-full" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" />
+            <img class="w-full" :src="sprite" />
         </div>
     </transition>
 </template>
@@ -11,13 +11,24 @@
 <script>
 export default {
     props: {
-        species: String,
-        type: Array
+        stateKey: Number
     },
 
     setup() {
 
     },
+
+    computed: {
+        species() {
+            return this.$store.state.pokemon[this.stateKey].species
+        },
+        type() {
+            return this.$store.state.pokemon[this.stateKey].type
+        },
+        sprite() {
+            return this.$store.state.pokemon[this.stateKey].sprite
+        }
+    }
 }
 </script>
 
