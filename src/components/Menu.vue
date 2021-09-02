@@ -1,7 +1,7 @@
 <template>
     <div class="py-6 px-10 flex justify-between items-center">
         <div>
-            <input placeholder="Filter by Name" />
+            <input @keyup="search" placeholder="Filter by Name" v-model="query" />
         </div>
         <div class="text-right">
             <h1 class="text-2xl text-blue-50 font-bold">Vue Pokedex</h1>
@@ -12,9 +12,17 @@
 
 <script>
 export default {
-    setup() {
-        
+    data() {
+        return {
+            query: ''
+        }
     },
+
+    methods: {
+        search() {
+            this.$store.commit('searchQuery', this.query)
+        }
+    }
 }
 </script>
 
