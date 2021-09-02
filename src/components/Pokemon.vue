@@ -11,23 +11,13 @@
 <script>
 export default {
     props: {
-        stateKey: Number
+        species: String,
+        type: Array,
+        sprite: String
     },
 
     setup() {
 
-    },
-
-    computed: {
-        species() {
-            return this.$store.state.pokemon[this.stateKey].species
-        },
-        type() {
-            return this.$store.state.pokemon[this.stateKey].type
-        },
-        sprite() {
-            return this.$store.state.pokemon[this.stateKey].sprite
-        }
     }
 }
 </script>
