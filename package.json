@@ -13,6 +13,7 @@
   },
   "main": "background.js",
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "aos": "^2.3.4",
     "autoprefixer": "^9",
