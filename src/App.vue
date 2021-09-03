@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-6 bg-gray-200">
-    <div class="col-span-1 h-screen overflow-auto bg-white shadow-xl z-20 relative">
+  <div class="xl:grid xl:grid-cols-6 bg-gray-200">
+    <div class="col-span-1 h-screen overflow-auto bg-white shadow-xl z-20 relative hidden xl:block">
       <Sidebar />
     </div>
     <div class="col-span-5 h-screen overflow-auto z-10 relative">

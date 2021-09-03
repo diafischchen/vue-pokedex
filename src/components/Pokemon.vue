@@ -1,8 +1,10 @@
 <template>
-    <div class="pokemon p-6 rounded-lg shadow-lg" :class="type[0]">
-        <h1 class="uppercase font-bold tracking-wider">{{ species }}</h1>
-        <p class="uppercase font-semibold tracking-wider">{{ type[0] }} <span v-if="type[1]">/ {{ type[1] }}</span></p>
-        <img class="h-64 w-64 mx-auto" :src="sprite" loading="lazy" />
+    <div class="pokemon sm:p-6 py-2 px-4 rounded-lg shadow-lg md:block flex justify-between items-center text-sm sm:text-base" :class="type[0]">
+        <div>
+            <h1 class="uppercase font-bold tracking-wider">{{ species }}</h1>
+            <p class="uppercase font-semibold tracking-wider">{{ type[0] }} <span v-if="type[1]">/ {{ type[1] }}</span></p>
+        </div>
+        <img class="md:h-64 md:w-64 sm:h-32 sm:w-32 h-20 w-20 md:mx-auto" :src="sprite" loading="lazy" />
     </div>
 </template>
 

@@ -3,7 +3,10 @@
         <div class="z-20 bg-blue-600 shadow-lg">
             <Menu />
         </div>
-        <div class="pokedex grid grid-cols-3 m-6 gap-6 z-10">
+        <div class="xl:hidden relative">
+            <Sidebar />
+        </div>
+        <div class="pokedex grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 m-6 gap-6 z-10">
             <Pokemon v-for="pokemon in pokemonArr" :key="pokemon.id" :species="pokemon.species" :type="pokemon.type" :sprite="pokemon.sprite" />
         </div>
     </div>
@@ -13,11 +16,13 @@
 import axios from 'axios'
 import Pokemon from './Pokemon.vue'
 import Menu from './Menu.vue'
+import Sidebar from './Sidebar.vue'
 
 export default {
     components: {
         Pokemon,
-        Menu
+        Menu,
+        Sidebar
     },
 
     setup() {
