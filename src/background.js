@@ -24,6 +24,8 @@ async function createWindow() {
     }
   })
 
+  win.setMenuBarVisibility(false)
+
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
     await win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
@@ -79,7 +81,3 @@ if (isDevelopment) {
     })
   }
 }
-
-app.on('browser-window-created',function(e,window) {
-  window.setMenu(null);
-});
