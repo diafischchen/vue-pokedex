@@ -1,7 +1,7 @@
 <template>
     <div class="py-6 px-10 flex justify-between items-center">
         <div>
-            <input @keyup="search" type="text" placeholder="Filter by Name" v-model="query" />
+            <input @keyup="search" type="text" placeholder="Filter by Name" v-model="query" class="border-blue-800 rounded-lg shadow-sm focus:ring-2 focus:ring-white" />
         </div>
         <div class="text-right">
             <h1 class="text-2xl text-blue-50 font-bold">Vue Pokedex</h1>
