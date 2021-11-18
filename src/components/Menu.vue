@@ -4,7 +4,7 @@
             <input @keyup="search" type="text" placeholder="Filter by Name" v-model="query" class=" 2xl:w-96 border-blue-800 rounded-lg shadow-sm focus:ring-2 focus:ring-white" />
         </div>
         <div class="md:text-right text-center">
-            <h1 class="md:text-2xl text-blue-50 font-bold"><span class="text-sm font-light">0.1.0</span> Vue Pokédex</h1>
+            <h1 class="md:text-2xl text-blue-50 font-bold"><span class="text-sm font-light">0.1.1</span> Vue Pokédex</h1>
             <p class="text-blue-300 hidden md:inline">Made with Vue, Tailwind, PokeAPI and Love by diafischchen</p>
         </div>
         <div class="md:hidden">
