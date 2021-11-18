@@ -1,5 +1,9 @@
 # vue-pokedex
 
+[Live Demo](https://vue-pokedex.diafischchen.net/)
+
+[Windows Executable](https://vue-pokedex.diafischchen.net/download/)
+
 ## Project setup
 ```
 npm install
